@@ -9,8 +9,14 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
+        appBar: AppBar(
+          title: Text(model.title + ' - stacked architecture'),
+        ),
         body: Center(
-          child: Text(model.title),
+          child: Text(model.title + ' ${model.counter}'),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: model.updateCounter,
         ),
       ),
       viewModelBuilder: () => HomeViewModel(),
