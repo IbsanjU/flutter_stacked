@@ -10,12 +10,13 @@ class StartupView extends StatelessWidget {
     return ViewModelBuilder<StartupViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
         appBar: AppBar(
-          title: Text(model.title + ' - stacked architecture'),
+          title: Text(model.title + ' - CupertinoNavigation'),
         ),
         body: Center(
           child: Text(model.title + ' ${model.counter}'),
         ),
         floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
           onPressed: model.updateCounter,
         ),
       ),
