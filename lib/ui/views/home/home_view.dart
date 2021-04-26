@@ -13,9 +13,19 @@ class HomeView extends StatelessWidget {
           title: Text(model.title + ' - stacked architecture'),
         ),
         body: Center(
-          child: Text(model.title + ' ${model.counter}'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(model.title + ' ${model.counter}'),
+              FlatButton(
+                  color: Theme.of(context).accentColor,
+                  onPressed: model.secondPage,
+                  child: Text('Goto Second Page'))
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
           onPressed: model.updateCounter,
         ),
       ),

@@ -15,10 +15,9 @@ dependencies:
   cupertino_icons: ^1.0.0
 
   # State Management
-  stacked: ^1.7.6
+  stacked: ^1.9.0
 
-  # Navigation
-  auto_route: ^0.2.1
+  # Navigation  
   stacked_services:
 
 dev_dependencies:
@@ -26,7 +25,6 @@ dev_dependencies:
     sdk: flutter
   
   build_runner:
-  auto_route_generator:
 
 flutter:
   uses-material-design: true

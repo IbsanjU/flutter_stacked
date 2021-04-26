@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_stacked/ui/views/home/home_view.dart';
+import 'package:flutter_stacked/app/app.locator.dart';
+import 'package:stacked_services/stacked_services.dart';
+
+import 'app/app.router.dart';
 
 void main() {
+  // setupLocator() will register the functions registerd in the locator in the
+  // the app.locator.dart file.
+  setupLocator();
   runApp(MyApp());
 }
 
@@ -15,8 +21,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeView(),
-      
+      // home: HomeView(),
+      navigatorKey: StackedService.navigatorKey,
+      onGenerateRoute: StackedRouter().onGenerateRoute,
     );
   }
 }
