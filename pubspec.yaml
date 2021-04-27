@@ -25,6 +25,7 @@ dev_dependencies:
     sdk: flutter
   
   build_runner:
+  stacked_generator:
 
 flutter:
   uses-material-design: true
